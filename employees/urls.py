@@ -1,6 +1,10 @@
-from django.urls import path
-from . import views
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from .views import EmployeeViewSet
+
+router = DefaultRouter()
+router.register(r'employees', EmployeeViewSet)
 
 urlpatterns = [
-    # Add your URL patterns here
+    path('', include(router.urls)),
 ]
