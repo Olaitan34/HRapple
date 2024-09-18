@@ -1,7 +1,7 @@
 # HRapple - Employee Management System
 
 HRapple is a minimal, scalable employee management software specifically designed for **Apple Inc.** It allows HR teams to manage employee records, including their employment status, department, and important dates (e.g., birthdays, employment start date). It also enables employees to update their personal information and documents like CVs.
-
+c
 ## Table of Contents
 
 - [Project Overview](#project-overview)
@@ -47,4 +47,99 @@ This project is developed by **Fatoki Olaitan** and **Sara BouBou** as part of a
 1. Clone the repository:
    ```bash
    git clone https://github.com/username/HRapple.git
-   cd HRapple
+   cd HRapplec
+
+
+   Frontend (React):
+
+plaintext
+Copy code
+hrapple-frontend/
+├── src/
+│   ├── components/
+│   │   ├── AddEmployeeForm.js
+│   │   ├── EmployeeList.js
+│   │   ├── LoginForm.js
+│   ├── services/
+│   │   ├── employeeService.js
+└── ...
+Installation
+Prerequisites
+Docker and Docker Compose installed
+Node.js and npm (if running frontend separately)
+Python and pip (for backend)
+Backend Setup
+Clone the repository:
+
+bash
+Copy code
+git clone https://github.com/your-repo/HRapple.git
+cd HRapple
+Create a virtual environment and install dependencies:
+
+bash
+Copy code
+pip install -r requirements.txt
+Run migrations and start the server:
+
+bash
+Copy code
+python manage.py migrate
+python manage.py runserver
+Frontend Setup
+Navigate to the frontend directory:
+
+bash
+Copy code
+cd hrapple-frontend
+Install the necessary packages:
+
+bash
+Copy code
+npm install
+Start the frontend server:
+
+bash
+Copy code
+npm start
+Docker Setup
+Build and run the containers:
+bash
+Copy code
+docker-compose up --build
+API Documentation
+The backend provides a REST API for interacting with employee data.
+
+Method	Endpoint	Description
+GET	/api/employees/	List all employees
+POST	/api/employees/	Add a new employee
+GET	/api/employees/{id}/	Retrieve an employee
+PUT	/api/employees/{id}/	Update an employee
+DELETE	/api/employees/{id}/	Remove an employee
+API documentation can be accessed through Swagger or ReDoc:
+
+Swagger: /swagger/
+ReDoc: /redoc/
+Frontend Documentation
+Main Components:
+
+AddEmployeeForm.js: Form to add a new employee (with dropdowns for status and role).
+Dashboard.js: Overview of employee actions.
+EmployeeList.js: List and filter employees.
+LoginForm.js: Handles authentication for access to the dashboard.
+Deployment
+To deploy this project using Docker:
+
+Ensure Docker is installed.
+Run:
+bash
+Copy code
+docker-compose up --build
+Access the project at http://localhost:3000 for the frontend and http://localhost:8000 for the backend.
+Challenges Faced
+CORS Issues: Initially faced issues with CORS when connecting the frontend to the backend. Resolved by configuring CORS settings in Django.
+File Upload Handling: Handling employee document uploads (e.g., CVs) required proper media handling in Django and React.
+Future Plans
+Role-based access control for restricting certain actions to admin users.
+Automated email notifications for employee status changes.
+Enhanced analytics for employee data, such as employment trends.
