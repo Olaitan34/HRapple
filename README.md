@@ -143,5 +143,6 @@ Future Plans
 Role-based access control for restricting certain actions to admin users.
 Automated email notifications for employee status changes.
 Enhanced analytics for employee data, such as employment trends.
-
+## A Google Slide
+https://docs.google.com/presentation/d/1WCVvLp7F8o6BIvE2EhdNs5N9hpdyF32ISUWzOc3j0wA/edit?usp=sharing
                                                                                                       49,1          21%
